@@ -1,4 +1,6 @@
 body {
+  text-align: center;
+  /* change above */
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -8,8 +10,20 @@ img {
 }
 
 .title {
+  margin-bottom: 32px;
+  /* changes above */
   font-size: 36px;
   font-weight: 900;
+}
+/* new below */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.info {
+  max-width: 200px;
 }
 
 /* do not edit this footer */
@@ -24,3 +38,5 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+
