@@ -2,28 +2,103 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  /* changes */
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  /* changes */
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
 }
 
-.footer {
-  height: 72px;
-  background: #eee;
-  color: darkmagenta;
+
+
+
+/* container */
+.container {
+  display: flex;
+  flex-grow: 1;
 }
+
+
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /* changes */
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+/* changes */
+ul { 
+  list-style-type: none;
+  /* lo que me faltó*/
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  font-size: 24px;
+  color:white;
+  text-decoration: none;
+}
+
+/*  */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 48px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  /* changes */
+  padding: 16px;
+  width: 350px;
 }
+
+.footer {
+  height: 72px;
+  background: #eee;
+  color: darkmagenta;
+  /* changes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+### Hints
+- You will need to change the flex-direction to push the footer down.
+- You will need to add some divs as containers to get things to line up correctly.
+- `flex-wrap` will help get the cards aligned correctly.
+-  Make sure you define how much space the cards should take up, in order for `flex-wrap` to work as intended.
+
+### Self Check
+- The header text is size 32px and weight 900.
+- The header text is vertically centered and 16px from the edge of the screen.
+- The footer is pushed to the bottom of the screen (the footer may go _below_ the bottom of the screen if the content of the 'cards' section overflows and/or if your screen is shorter).
+- The footer text is centered horizontally and vertically.
+- The sidebar and cards take up all available space above the footer.
+- The sidebar is 300px wide (and it doesn't shrink).
+- The sidebar links are size 24px, are white, and do not have the underline text decoration.
+- The sidebar has 16px padding.
+- There is 48px padding around the 'cards' section.
+- The cards are arranged horizontally, but wrap to multiple lines when they run out of room on the page. */
